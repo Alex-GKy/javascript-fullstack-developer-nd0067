@@ -1,5 +1,23 @@
-<ul>
-  <li *ngFor="let item of items">
-    {{item.name}}
-  </li>
-</ul>
+<div id="product-table">
+
+<table >
+  <thead>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{item.id}}</td>
+      <td><img src={{item.url}} alt={{item.description}}></td>
+      <td>
+        {{item.name}}
+      </td>
+      <td>{{item.description}}</td>
+      <td>{{item.price}} €</td>
+      <td>
+        <button type="button">Add to cart</button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+</div>
