@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  font-family: "Comic Sans MS";
+
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.product-thumb {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 80px;
+}
+
+.content {
+  width:50%;
+  margin:auto;
+}
+
+td {
+  padding-right: 20px
+}
+
+table {
+  padding-top: 10px
+}
+
+
+thead tr td {
+  color: green;
+  font-weight: bold;
+}
+
+table {
+  text-align: center;
+  background-color: orange;
+}
+

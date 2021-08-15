@@ -4,7 +4,6 @@
   overflow: hidden;
   position: relative;
   background: yellow;
-  color: orange;
   border: 1px solid orange;
 }
 .scroll-left p {
@@ -18,8 +17,9 @@
   transform:translateX(100%);
   /* Apply animation to this element */
   animation: scroll-left 10s linear infinite;
-  font-size:20px;
+  font-size:40px;
   font-weight: bold;
+  color: green;
 }
 /* Move it (define the animation) */
 @keyframes scroll-left {
