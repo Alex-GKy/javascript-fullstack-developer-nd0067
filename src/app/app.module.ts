@@ -8,6 +8,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CartComponent } from './cart/cart.component';
     ProductDetailsComponent,
     HeaderComponent,
     CartComponent,
+    CheckoutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
