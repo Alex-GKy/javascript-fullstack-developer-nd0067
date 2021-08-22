@@ -28,10 +28,6 @@ td {
   padding-right: 20px;
 }
 
-table {
-  padding-top: 10px;
-}
-
 thead tr td {
   color: green;
   font-weight: bold;
@@ -40,4 +36,5 @@ thead tr td {
 table {
   text-align: center;
   background-color: orange;
+  padding-top: 10px;
 }
