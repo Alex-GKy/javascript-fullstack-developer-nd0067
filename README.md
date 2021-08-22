@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
+# Introduction
+
+This web shop lets a user see a list of products with pictures, and inspect their details.
+Users can add items to a shopping cart, provide their payment details & address, and submit their order.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
