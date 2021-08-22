@@ -1,28 +1,29 @@
 <div class="content">
   <p class="headline">This is the amazing product you can have!</p>
-  <table >
-
-      <thead>
-        <tr>
-          <td>What does it look like?</td>
-          <td>What is it?</td>
-          <td>What can you do with it?</td>
-          <td>What will it cost you?</td>
-        </tr>
-
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of item">
-          <td>
-            <img class="product-thumb" src={{item.url}} alt={{item.description}}>
-          </td>
-          <td>{{item.name}}</td>
-          <td>{{item.description}}</td>
-          <td>{{item.price}} €</td>
-        </tr>
-      </tbody>
+  <table>
+    <thead>
+      <tr>
+        <td>What does it look like?</td>
+        <td>What is it?</td>
+        <td>What can you do with it?</td>
+        <td>What will it cost you?</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of item">
+        <td>
+          <img
+            class="product-thumb"
+            src="{{ item.url }}"
+            alt="{{ item.description }}"
+          />
+        </td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.price }} €</td>
+      </tr>
+    </tbody>
   </table>
 </div>
 
-{{item.id}}
-
+{{ item.id }}

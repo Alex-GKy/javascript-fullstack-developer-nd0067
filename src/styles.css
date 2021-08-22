@@ -2,10 +2,15 @@
 
 * {
   font-family: "Comic Sans MS";
-
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .product-thumb {
   border: 1px solid #ddd;
@@ -15,18 +20,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .content {
-  width:50%;
-  margin:auto;
+  width: 50%;
+  margin: auto;
 }
 
 td {
-  padding-right: 20px
+  padding-right: 20px;
 }
 
 table {
-  padding-top: 10px
+  padding-top: 10px;
 }
-
 
 thead tr td {
   color: green;
@@ -37,4 +41,3 @@ table {
   text-align: center;
   background-color: orange;
 }
-
