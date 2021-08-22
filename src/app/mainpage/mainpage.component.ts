@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { Product } from '../model/product.model';
 
 @Component({
   selector: 'app-mainpage',
@@ -7,7 +8,7 @@ import { DataService } from '../service/data.service';
   styleUrls: ['./mainpage.component.css'],
 })
 export class MainpageComponent implements OnInit {
-  items: any[] = [];
+  items: Product[] = [];
 
   constructor(private dataService: DataService) {}
 
