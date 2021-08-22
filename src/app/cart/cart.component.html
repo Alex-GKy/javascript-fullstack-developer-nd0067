@@ -1,0 +1,11 @@
+<div class="content">
+  <p class="headline">Here's what you have in your cart already:</p>
+  <table>
+    <tr *ngFor="let cartItem of cart">
+      <td>{{cartItem.name}}</td>
+      <td>{{cartItem.description}}</td>
+      <td>{{cartItem.price}}</td>
+    </tr>
+
+  </table>
+</div>
