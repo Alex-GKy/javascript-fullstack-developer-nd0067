@@ -5,7 +5,6 @@ import { Product } from '../model/product.model';
   providedIn: 'root',
 })
 export class CartService {
-
   cart: Product[] = [];
 
   constructor() {}
@@ -19,10 +18,10 @@ export class CartService {
   }
 
   totalPrice(): number {
-    let price: number = 0 ;
-    this.cart.forEach( item => {
+    let price: number = 0;
+    this.cart.forEach((item) => {
       price += item.price;
-    })
+    });
 
     return price;
   }

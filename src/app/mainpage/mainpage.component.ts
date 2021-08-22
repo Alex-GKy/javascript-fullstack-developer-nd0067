@@ -26,7 +26,7 @@ export class MainpageComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addProduct(product);
-    this.router.navigateByUrl('cart')
+    this.router.navigateByUrl('cart');
   }
 
   cart(): Product[] {
