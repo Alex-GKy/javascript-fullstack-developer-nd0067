@@ -14,4 +14,14 @@ export class DataService {
   getProducts(): Observable<any> {
     return this.http.get<Product>(this.jsonURL);
   }
+
+  sendOrder(products: Product[]): void {
+    //if we had a backend, we'd do something like:
+    //this.http.post(this.jsonURL, products);
+
+    console.log('An order was submitted')
+    products.forEach( item => {
+      console.log(`${item.id} ${item.name} ${item.price}`)
+    })
+  }
 }

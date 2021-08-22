@@ -1,1 +1,54 @@
-<p>checkout works!</p>
+<div class="content">
+  <p class="headline">Please enter your shipping details</p>
+  <form #form="ngForm" (ngSubmit)="submitForm()">
+    <input
+      type="text"
+      name="customerName"
+      placeholder="Your name"
+      [(ngModel)]="customerName"
+      required
+    />
+    <br />
+    <input
+      type="text"
+      name="address"
+      placeholder="Address"
+      [(ngModel)]="address"
+      required
+    />
+    <br />
+
+    <input
+      type="text"
+      name="creditCardNumber"
+      placeholder="Credit card number"
+      [(ngModel)]="creditCardNumber"
+      required
+    />
+    <br />
+
+    <input
+      type="text"
+      name="phoneNumber"
+      placeholder="Phone number"
+      [(ngModel)]="phoneNumber"
+      required
+    />
+    <br />
+
+    <input
+      type="text"
+      name="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      required
+    />
+    <br />
+
+    <input type="submit" value="Submit order" [disabled]="form.invalid"/>
+  </form>
+
+  <div *ngIf="form.dirty && form.invalid">
+    Please fill in all fields in the form!
+  </div>
+</div>
