@@ -17,4 +17,17 @@ export class CartService {
   numberOfProducts(): number {
     return this.cart.length;
   }
+
+  totalPrice(): number {
+    let price: number = 0 ;
+    this.cart.forEach( item => {
+      price += item.price;
+    })
+
+    return price;
+  }
+
+  clearCart(): void {
+    this.cart = [];
+  }
 }

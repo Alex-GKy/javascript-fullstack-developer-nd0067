@@ -1,11 +1,32 @@
 <div class="content">
-  <p class="headline">Here's what you have in your cart already:</p>
+  <p class="headline">
+    You have {{ numberOfProducts() }} items in your cart!
+  </p>
   <table>
-    <tr *ngFor="let cartItem of cart">
-      <td>{{cartItem.name}}</td>
-      <td>{{cartItem.description}}</td>
-      <td>{{cartItem.price}}</td>
-    </tr>
-
+    <thead>
+      <tr>
+        <td>Item</td>
+        <td>Price</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cartItem of cart()">
+        <td>{{ cartItem.name }}</td>
+        <td>{{ cartItem.price }} €</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="row-total">
+          Total: {{ totalPrice() }} €
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button (click)="clearCart()">Clear cart</button>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
