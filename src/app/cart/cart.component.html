@@ -21,7 +21,9 @@
           <button (click)="clearCart()">Clear cart</button>
         </td>
         <td>
-          <button (click)="navigateToCheckout()" [disabled]="totalPrice() <= 0">Go to checkout</button>
+          <button (click)="navigateToCheckout()" [disabled]="totalPrice() <= 0">
+            Go to checkout
+          </button>
         </td>
       </tr>
     </tbody>

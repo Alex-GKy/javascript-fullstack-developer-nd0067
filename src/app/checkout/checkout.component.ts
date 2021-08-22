@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { CartService } from '../service/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -16,7 +17,8 @@ export class CheckoutComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -25,5 +27,9 @@ export class CheckoutComponent implements OnInit {
     let products = this.cartService.cart;
     this.dataService.sendOrder(products);
 
+    // with a real server, we'd probably get a promise, and only clear when it resolves:
+    this.cartService.clearCart();
+
+    this.router.navigateByUrl('success');
   }
 }
