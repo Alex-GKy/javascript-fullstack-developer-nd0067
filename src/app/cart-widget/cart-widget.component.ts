@@ -1,17 +1,21 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cart-widget',
   templateUrl: './cart-widget.component.html',
-  styleUrls: ['./cart-widget.component.css']
+  styleUrls: ['./cart-widget.component.css'],
 })
 export class CartWidgetComponent implements OnInit {
+  @Input() amountOfItems = 0;
+  @Output() clearCartEvent = new EventEmitter<number>();
 
-  @Input() amountItems = 0;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  clearCart(amountOfItems: number): void {
+    this.amountOfItems = 0; //doesn't make too much sense, but for the sake of practising...
+    this.clearCartEvent.emit(amountOfItems);
   }
-
 }

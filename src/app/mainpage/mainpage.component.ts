@@ -37,4 +37,11 @@ export class MainpageComponent implements OnInit {
   cart(): Product[] {
     return this.cartService.cart;
   }
+
+  clearCart(amountOfItems: number): void {
+
+    this.cartService.clearCart();
+    alert(`${amountOfItems} item(s) removed from cart!`);
+
+  }
 }

@@ -1,3 +1,10 @@
-<div>
-  Number of items in your cart: {{amountItems}}
+<div class="content">
+  <table>
+    <tr>
+      <td>Number of items in your cart: {{amountOfItems}}</td>
+      <td>
+        <button (click)="clearCart(amountOfItems)">Clear cart</button>
+      </td>
+    </tr>
+  </table>
 </div>
