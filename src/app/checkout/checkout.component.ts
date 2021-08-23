@@ -25,12 +25,6 @@ export class CheckoutComponent implements OnInit {
     email: '',
   };
 
-  // customerName: string = '';
-  // address: string = '';
-  // creditCardNumber: string = '';
-  // phoneNumber: string = '';
-  // email: string = '';
-
   constructor(
     private dataService: DataService,
     private cartService: CartService,

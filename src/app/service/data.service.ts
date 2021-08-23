@@ -22,7 +22,7 @@ export class DataService {
 
     console.log('An order was submitted');
     products.forEach((item) => {
-      console.log(`${item.id} ${item.name} ${item.price}`);
+      console.log(`Item ID: ${item.id}; Name: ${item.name}; Price: ${item.price}`);
     });
   }
 }
