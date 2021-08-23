@@ -7,7 +7,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
-  { path: '', component: MainpageComponent },
+  { path: '', component: MainpageComponent, data:{cartWidgetVisible:true} },
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },

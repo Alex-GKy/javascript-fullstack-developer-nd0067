@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuccessComponent } from './success/success.component';
+import { CartWidgetComponent } from './cart-widget/cart-widget.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SuccessComponent } from './success/success.component';
     CartComponent,
     CheckoutComponent,
     SuccessComponent,
+    CartWidgetComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
