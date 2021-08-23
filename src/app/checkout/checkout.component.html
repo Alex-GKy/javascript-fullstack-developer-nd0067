@@ -1,57 +1,88 @@
 <div class="content">
   <p class="headline">Please enter your shipping details</p>
   <form #form="ngForm" (ngSubmit)="submitForm()">
-    <input
-      type="text"
-      name="customerName"
-      placeholder="Your name"
-      [(ngModel)]="customer.customerName"
-      required
-      minlength="3"
-      #customerName="ngModel"
-    />
-    <br />
-    <input
-      type="text"
-      name="address"
-      placeholder="Address"
-      [(ngModel)]="customer.address"
-      required
-      minlength="3"
-      #address="ngModel"
-    />
-    <br />
+    <table>
+      <tr>
+        <td><label>Name:</label></td>
+        <td>
+          <input
+            type="text"
+            name="customerName"
+            placeholder="Your name"
+            [(ngModel)]="customer.customerName"
+            required
+            minlength="3"
+            #customerName="ngModel"
+          />
+        </td>
+      </tr>
 
-    <input
-      type="number"
-      name="creditCardNumber"
-      placeholder="Credit card number"
-      [(ngModel)]="customer.creditCardNumber"
-      required
-      #creditCardNumber="ngModel"
-    />
-    <br />
+      <tr>
+        <td>
+          <label>Address:</label>
+        </td>
+        <td>
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            [(ngModel)]="customer.address"
+            required
+            minlength="3"
+            #address="ngModel"
+          />
+        </td>
+      </tr>
 
-    <input
-      type="tel"
-      name="phoneNumber"
-      placeholder="Phone number"
-      [(ngModel)]="customer.phoneNumber"
-      required
-      minlength="6"
-      #phoneNumber="ngModel"
-    />
-    <br />
+      <tr>
+        <td>
+          <label>Credit card number:</label>
+        </td>
+        <td>
+          <input
+            type="number"
+            name="creditCardNumber"
+            placeholder="Credit card number"
+            [(ngModel)]="customer.creditCardNumber"
+            required
+            #creditCardNumber="ngModel"
+          />
+        </td>
+      </tr>
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Email"
-      [(ngModel)]="customer.email"
-      required
-      #email="ngModel"
-    />
-    <br />
+      <tr>
+        <td>
+          <label>Phone number:</label>
+        </td>
+        <td>
+          <input
+            type="tel"
+            name="phoneNumber"
+            placeholder="Phone number"
+            [(ngModel)]="customer.phoneNumber"
+            required
+            minlength="6"
+            #phoneNumber="ngModel"
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label>Email:</label>
+        </td>
+        <td>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            [(ngModel)]="customer.email"
+            required
+            #email="ngModel"
+          />
+        </td>
+      </tr>
+    </table>
 
     <input type="submit" value="Submit order" [disabled]="form.invalid" />
   </form>
@@ -79,7 +110,9 @@
   </div>
 
   <div *ngIf="phoneNumber.invalid && phoneNumber.touched">
-    <div *ngIf="phoneNumber.errors">Please enter a valid phone number.</div>
+    <div *ngIf="phoneNumber.errors">
+      Please enter a valid phone number of min. 6 digits.
+    </div>
   </div>
 
   <div *ngIf="email.invalid && email.touched">
