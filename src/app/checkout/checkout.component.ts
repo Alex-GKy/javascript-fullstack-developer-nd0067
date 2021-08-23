@@ -17,7 +17,6 @@ interface Customer {
   styleUrls: ['./checkout.component.css'],
 })
 export class CheckoutComponent implements OnInit {
-
   customer: Customer = {
     customerName: '',
     address: '',
