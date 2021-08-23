@@ -5,50 +5,84 @@
       type="text"
       name="customerName"
       placeholder="Your name"
-      [(ngModel)]="customerName"
+      [(ngModel)]="customer.customerName"
       required
+      minlength="3"
+      #customerName="ngModel"
     />
     <br />
     <input
       type="text"
       name="address"
       placeholder="Address"
-      [(ngModel)]="address"
+      [(ngModel)]="customer.address"
       required
+      minlength="3"
+      #address="ngModel"
     />
     <br />
 
     <input
-      type="text"
+      type="number"
       name="creditCardNumber"
       placeholder="Credit card number"
-      [(ngModel)]="creditCardNumber"
+      [(ngModel)]="customer.creditCardNumber"
       required
+      #creditCardNumber="ngModel"
     />
     <br />
 
     <input
-      type="text"
+      type="tel"
       name="phoneNumber"
       placeholder="Phone number"
-      [(ngModel)]="phoneNumber"
+      [(ngModel)]="customer.phoneNumber"
       required
+      minlength="6"
+      #phoneNumber="ngModel"
     />
     <br />
 
     <input
-      type="text"
+      type="email"
       name="email"
       placeholder="Email"
-      [(ngModel)]="email"
+      [(ngModel)]="customer.email"
       required
+      #email="ngModel"
     />
     <br />
 
     <input type="submit" value="Submit order" [disabled]="form.invalid" />
   </form>
 
-  <div *ngIf="form.dirty && form.invalid">
-    Please fill in all fields in the form!
+  <div *ngIf="customerName.invalid && customerName.touched">
+    <div *ngIf="customerName.errors?.required">Please enter your name.</div>
+
+    <div *ngIf="customerName.errors?.minlength">
+      The name you entered is too short.
+    </div>
+  </div>
+
+  <div *ngIf="address.invalid && address.touched">
+    <div *ngIf="address.errors?.required">Please enter an address.</div>
+
+    <div *ngIf="address.errors?.minlength">
+      The address you entered is too short.
+    </div>
+  </div>
+
+  <div *ngIf="creditCardNumber.invalid && creditCardNumber.touched">
+    <div *ngIf="creditCardNumber.errors">
+      Please enter a valid credit card number.
+    </div>
+  </div>
+
+  <div *ngIf="phoneNumber.invalid && phoneNumber.touched">
+    <div *ngIf="phoneNumber.errors">Please enter a valid phone number.</div>
+  </div>
+
+  <div *ngIf="email.invalid && email.touched">
+    <div *ngIf="email.errors">Please enter a valid email address.</div>
   </div>
 </div>

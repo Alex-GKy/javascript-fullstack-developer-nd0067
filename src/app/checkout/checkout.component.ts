@@ -3,17 +3,34 @@ import { DataService } from '../service/data.service';
 import { CartService } from '../service/cart.service';
 import { Router } from '@angular/router';
 
+interface Customer {
+  customerName: string;
+  address: string;
+  creditCardNumber: string;
+  phoneNumber: string;
+  email: string;
+}
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css'],
 })
 export class CheckoutComponent implements OnInit {
-  customerName: string = '';
-  address: string = '';
-  creditCardNumber: string = '';
-  phoneNumber: string = '';
-  email: string = '';
+
+  customer: Customer = {
+    customerName: '',
+    address: '',
+    creditCardNumber: '',
+    phoneNumber: '',
+    email: '',
+  };
+
+  // customerName: string = '';
+  // address: string = '';
+  // creditCardNumber: string = '';
+  // phoneNumber: string = '';
+  // email: string = '';
 
   constructor(
     private dataService: DataService,
