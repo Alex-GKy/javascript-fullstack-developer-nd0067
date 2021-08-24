@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuccessComponent } from './success/success.component';
 import { CartWidgetComponent } from './cart-widget/cart-widget.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CartWidgetComponent } from './cart-widget/cart-widget.component';
     CheckoutComponent,
     SuccessComponent,
     CartWidgetComponent,
+    NavigationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
