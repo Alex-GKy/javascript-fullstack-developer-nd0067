@@ -30,6 +30,7 @@ export class MainpageComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addProduct(product);
+    alert(`Product ${product.name} was added to the cart!`)
     this.router.navigateByUrl('cart');
   }
 
